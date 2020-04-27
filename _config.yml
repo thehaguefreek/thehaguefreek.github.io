@@ -69,7 +69,6 @@ defaults:
       layout: post
       image: https://via.placeholder.com/1200x800
       show_sidebar: true
-      hide_hero: true
 
 markdown: kramdown
 highlighter: rouge
