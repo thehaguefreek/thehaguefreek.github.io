@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Welcome to Jekyll!"
 date:   2020-04-26 23:13:15 +0200
 categories: jekyll update
