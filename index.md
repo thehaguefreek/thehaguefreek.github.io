@@ -7,6 +7,6 @@ toc: true
 toc_title: Contents
 ---
 
-# Welcome
+## Welcome
 
 To my page
