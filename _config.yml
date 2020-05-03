@@ -59,7 +59,7 @@ defaults:
       type: "pages"
     values:
       show_sidebar: true
-      hero_image: img/bladluis.png
+      hero_image: img/bladluis-mirrored.png
   -
     scope:
       path: ""
