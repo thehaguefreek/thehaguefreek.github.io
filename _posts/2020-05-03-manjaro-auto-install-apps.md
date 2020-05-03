@@ -8,13 +8,17 @@ date:   2020-05-03
 categories: manjaro script install apps applications
 ---
 
+Jump directly to the final [example script](#full-script).
+
+
 ## Why Linux is just better
 
-In his popular video ["10 ways Linux is just better!" ](https://www.youtube.com/watch?v=4halg2kzPms), Linus Tech Tips talks about a developer with a script that installs all the apps he needs in no time. Let's create that script!
+In his popular video ["10 ways Linux is just better!" ](https://www.youtube.com/watch?v=4halg2kzPms), Linus Tech Tips talks about a developer with a script that installs all the apps he needs in no time.  
+Let's create that script!
 
 Linux was the first OS introducing an "app store". Since you can install almost any app from this app store (or package manager), it's dead simple to create a small script that installs all your favourite programs.
 
-Since every Linux distro has it's own package manager the installation process is slightly different. Today we'll create a script for Manjaro.
+Since every Linux distro has it's own package manager, the installation process is slightly different for every distribution. Today we'll create a script for Manjaro.
 
 ## The three Package managers of Manjaro
 
