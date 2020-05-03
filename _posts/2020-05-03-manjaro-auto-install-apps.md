@@ -8,8 +8,7 @@ date:   2020-05-03
 categories: manjaro script install apps applications
 ---
 
-Jump directly to the final [example script](#full-script).
-
+**Jump directly to the final [example script](#full-script).**
 
 ## Why Linux is just better
 
