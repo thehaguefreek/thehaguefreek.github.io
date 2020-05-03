@@ -1,6 +1,8 @@
 ---
 layout: post
 comments: true
+toc: true
+toc_title: Contents
 title:  "Manjaro app install script"
 subtitle:  "How to create a simple script to automatically install all your favourite applications"
 image: /pics/Manjaro_Installation.png
