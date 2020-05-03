@@ -2,9 +2,9 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: page
+title: Linux
+subtitle: It's a fine command line
 ---
-
-## It's a fine command line
 
 I made this blog for my own fun and to help people navigate the command line.
 
