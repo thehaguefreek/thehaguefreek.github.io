@@ -27,9 +27,9 @@ Manjaro uses Pacman as its main package manager. If you can't find your app in P
 ## Part 1: Pacman
 
 The install commnand for Pacman looks like this:
-` ` ` bash
+``` bash
 sudo pacman -S app_name --needed --noconfirm
-` ` ` 
+``` 
 Add **--needed** to prevent the reïnstallation already installed scripts.
 Add **--nocoffirm** to automatically install the app with no questions asked.
 
