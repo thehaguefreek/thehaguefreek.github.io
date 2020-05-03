@@ -22,7 +22,7 @@ I'll explain how to create a script that sets your favourite Manjaro settings in
 
 ## The three Package managers of Manjaro
 
-Manjaro uses Pacman as its main package manager. If you can't find your app in Pacman, you might fid it in the Pamac manager. Pamac manages the packages from the Arch user repository. And if we can't find our app there we still have Snap as our last resort.
+Manjaro uses Pacman as its main package manager. If you can't find your app in Pacman, you might find it in the Pamac manager. Pamac manages the packages from the Arch user repository. And if we can't find our app there we still have Snap as our last resort.
 
 ## Part 1: Pacman
 
