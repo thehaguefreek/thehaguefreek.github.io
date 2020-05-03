@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Manjaro Auto Install Apps"
 subtitle:  "How to create a simple script to automatically install all your favourite applications"
-image: pics/Manjaro_Installation.png
+image: /pics/Manjaro_Installation.png
 date:   2020-05-03
 categories: manjaro script install apps applications
 ---
