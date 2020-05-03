@@ -8,9 +8,9 @@ date:   2020-05-03
 categories: manjaro script install apps applications
 ---
 
-**Jump directly to the final [example script](#full-script).**
-
 ## Why Linux is just better
+
+**Jump directly to the final [example script](#full-script).**
 
 In his popular video ["10 ways Linux is just better!" ](https://www.youtube.com/watch?v=4halg2kzPms), Linus Tech Tips talks about a developer with a script that installs all the apps he needs in no time.  
 Let's create that script!
