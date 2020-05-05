@@ -74,5 +74,5 @@ watch boinccmd --get_simple_gui_info
 ### Start BOINC automatically on boot
 
 ```bash
-systemctl enable boinc-client.service
+sudo systemctl enable boinc-client.service
 ```
