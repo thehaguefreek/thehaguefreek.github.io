@@ -3,9 +3,9 @@ layout: post
 comments: true
 toc: true
 toc_title: Contents
-title:  "Manjaro app install script"
+title:  "Ubuntu app install script"
 subtitle:  "How to create a simple script to automatically install all your favourite applications"
-image: /pics/Manjaro_Installation.png
+image: /pics/Ubuntu-1404-VPS.jpg
 date:   2020-05-03
 categories: manjaro script install apps applications
 ---
