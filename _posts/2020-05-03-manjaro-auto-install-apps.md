@@ -7,7 +7,7 @@ title:  "Ubuntu app install script"
 subtitle:  "How to create a simple script to automatically install all your favourite applications"
 image: /pics/Ubuntu-1404-VPS.jpg
 date:   2020-05-03
-categories: manjaro script install apps applications
+categories: ubuntu script install apps applications
 ---
 
 ## Why Linux is just better
@@ -19,135 +19,75 @@ Let's create that script!
 
 Linux was the first OS introducing an "app store". Since you can install almost any app from this app store (or package manager), it's dead simple to create a small script that installs all your favourite programs.
 
-Since every Linux distro has it's own package manager, the installation process is slightly different for every distribution. Today we'll create a script for Manjaro.
+Since every Linux distro has it's own package manager, the installation process is slightly different for every distribution. Today we'll create a script for Ubuntu.
 
-## The three Package managers of Manjaro
+## The two Package managers of Ubuntu
 
-Manjaro uses Pacman as its main package manager. If you can't find your app in Pacman, you might find it in the Pamac manager. Pamac manages the packages from the Arch user repository. And if we can't find our app there we still have Snap as our last resort.
+Ubuntu uses aptitude as main packange manager. A couple of years ago Ubuntu introduces snap packages. Snap apps run in a container and don't rely on system wide dependencies. I'll include both aptitude and snap in this post
 
-## Part 1: Pacman Apps
+## Part 1: Aptitude Apps
 
-The install command for Pacman looks like this:
+Install aptitude applications. Add -y to install automatically without asking questions.
 ``` bash
-sudo pacman -S app_name --needed --noconfirm
+sudo apt -y install app_name
 ``` 
-Add **--needed** to prevent the reïnstallation of already installed apps.  
-Add **--nocoffirm** to automatically install the application with no questions asked.
 
-### Pacman example
+### Aptitude example
 
-Now we just have to put our favourite apps in an array and loop over this array to install pacman apps:
+Now we just have to put our favourite apps in an array and loop over this array to install aptitude apps:
 
 ```bash
 # Array with applications
-pacmanApps=(
+aptApps=(
     # Editors
     nano
-    code
+    gedit
 
-    # Gaming
-    steam
+    # Benchmarking
+    htop
+    stress
 )
 
-# Install pacman applications
-for i in "${pacmanApps[@]}"
+# Install Aptitude applications
+for i in "${aptApps[@]}"
 do
-    sudo pacman -S "$i" --needed --noconfirm
+    sudo apt -y install "$i"
 done
 ```
 
-## Part 2: Pamac Apps
+## Part 2: Snap Store
 
-An automated script for pamac requires an extra step. Since Pamac doesn't check if an app is already installed, we have to do that first.
+Snap is very similar the aptitude process.
 
-The command to check if an app is installed:
-```bash
-if hash app_name 2>/dev/null;    # Check if command (app) is available
-```
-
-The command to install a Pamac app:
-```bash
-pamac build app_name
-```
-
-We have to add one last bit. Since the command and package name often differ, we'll have to put both in our array.
-
-### Pamac example
-
-Format: [command]=package_name
-
-```bash
-declare -A pamacApps
-pamacApps=(
-    # Developement
-    [symfony]=symfony-cli
-
-    # Audio/Video
-    [spotify]=spotify
-)
-
-# Install Pamac applications
-for i in "${!pamacApps[@]}"
-do
-    if hash app_name 2>/dev/null;    # Check if command (app) is available
-    then
-        echo "$i already installed"
-    else
-        pamac build "${pamacApps[$i]}"
-    fi
-done
-
-```
-
-## Part 3: Snap Apps
-
-Snap is very similar to the a Pamac process.
-
-The command to check if an apps is installed (same as in Pamac):
-```bash
-if hash "$i" 2>/dev/null;    # Check if command (app) is available
-```
 
 The command to install snap apps:
 ```bash
-sudo snap install "${snapApps[$i]}"
+sudo snap install app_name
 ```
+**\*** Some apps need permission to run like a classic app. Add **--classic** in this case
+
 
 ## Full script
 
 Let's combine everything in a single script to install all your favourite Linux/Manjaro/Arch apps. 
 
 ```bash
-# Pacman Apps
-pacmanApps=(
+# Snap Apps
+aptApps=(
     # Editors
     nano
-    code
+    gedit
 
-    # Gaming
-    discord
-    steam
-)
-
-Pamac Apps
-declare -A pamacApps
-pamacApps=(
-    # Format: [command]=package_name
-
-    # Developement
-    [symfony]=symfony-cli
-
-    # Audio/Video
-    [spotify]=spotify
+    # Benchmarking
+    htop
+    stress
 )
 
 # Snap Apps
 declare -A snapApps
 snapApps=(
-    # Format: [command]=package_name
-
-    # Fun
-    [toilet-deej.toilet]=toilet-deej    
+    # Editors
+    --classic code   
 )
 
 # Install Pacman applications
