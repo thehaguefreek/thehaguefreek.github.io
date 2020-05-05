@@ -7,7 +7,7 @@ title:  "Manjaro app install script"
 subtitle:  "How to create a simple script to automatically install all your favourite applications"
 image: /pics/Manjaro_Installation.png
 date:   2020-05-03
-categories: manjaro script install apps applications
+categories: linux manjaro scripts install applications
 ---
 
 ## Why Linux is just better

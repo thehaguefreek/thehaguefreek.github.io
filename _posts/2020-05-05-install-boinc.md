@@ -7,7 +7,7 @@ title:  "BOINC from the CLI"
 subtitle:  "Install and setup BOINC on a headless Ubuntu Server"
 image: /pics/BOINC_logo.png
 date:   2020-05-05
-categories: boinc headless install linux 
+categories: linux ubuntu headless boinc  
 ---
 
 ## Save the world from the safety of your command line
