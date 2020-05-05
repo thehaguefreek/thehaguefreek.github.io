@@ -14,7 +14,7 @@ categories: boinc headless install linux
 
 Whether you want to fight COVID-19, search for extraterrestrial lifeforms or research elementary particles, you can help by installing BOINC.
 
-BOINC is a platform that runs scientific calculations on your pc, phone, laptop or raspberry pi. You can help your favorite organizations to computer power they would never be able to buy.
+BOINC is a platform that runs scientific calculations on your pc, phone, laptop or Raspberry Pi. You can help your favorite organizations to computer power they would never be able to buy.
 
 Today, almost a million computers are actively connected to the "grid". Together they've already achieved great things on the subjects of Cancer, HIV, Malaria, Alzheimer's, astrophysics, elementary particles and much more.
 
