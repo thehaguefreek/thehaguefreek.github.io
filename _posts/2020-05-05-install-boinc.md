@@ -40,7 +40,7 @@ In this example I'm going to add the Rosetta@Home project. But of course you can
 **Start the service**  
 (this will create the empty config files)
 ```bash
-systemctl start boinc-client.service
+sudo systemctl start boinc-client.service
 ```
 
 **Create a NEW account**  
