@@ -106,6 +106,8 @@ The command to install snap apps:
 sudo snap install app_name
 ```
 
+### Snap example
+```bash
 # Snap Apps
 snapApps=(
     # Fun
