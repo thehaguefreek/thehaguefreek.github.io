@@ -15,15 +15,15 @@ categories: linux manjaro scripts install applications
 **Jump directly to the final [example script](#full-script).**
 
 In his popular video ["10 ways Linux is just better!" ](https://www.youtube.com/watch?v=4halg2kzPms), Linus Tech Tips talks about a developer with a script that installs all the apps he needs in no time.  
-Let's create that script!
+**Let's create that script!**
 
-Linux was the first OS introducing an "app store". Since you can install almost any app from this app store (or package manager), it's dead simple to create a small script that installs all your favourite programs.
+Linux was the first OS introducing an "app store". Since you can install almost any app from this app store (or package manager), it's dead simple to create a small script that installs all your favorite programs.
 
 Since every Linux distro has it's own package manager, the installation process is slightly different for every distribution. Today we'll create a script for Manjaro.
 
-## The three Package managers of Manjaro
+## The three Package Managers of Manjaro
 
-Manjaro uses Pacman as its main package manager. If you can't find your app in Pacman, you might find it in the Pamac manager. Pamac manages the packages from the Arch user repository. And if we can't find our app there we still have Snap as our last resort.
+Manjaro uses Pacman as its main package manager. If you can't find your app in Pacman, you might find it in the Pamac manager. Pamac manages the packages from the Arch user repository. And if we can't find our app there we still have Snap Store as our last resort.
 
 ## Part 1: Pacman Apps
 
@@ -31,12 +31,12 @@ The install command for Pacman looks like this:
 ``` bash
 sudo pacman -S app_name --needed --noconfirm
 ``` 
-Add **--needed** to prevent the reïnstallation of already installed apps.  
-Add **--nocoffirm** to automatically install the application with no questions asked.
+* **--needed** to prevent the reïnstallation of already installed apps.  
+* **--noconfirm** to automatically install the application with no questions asked.
 
 ### Pacman example
 
-Now we just have to put our favourite apps in an array and loop over this array to install pacman apps:
+Now we just have to put our favorite apps in an array and loop over this array to install Pacman apps:
 
 ```bash
 # Array with applications
@@ -99,23 +99,29 @@ done
 
 ```
 
-## Part 3: Snap Apps
-
-Snap is very similar to the a Pamac process.
-
-The command to check if an apps is installed (same as in Pamac):
-```bash
-if hash "$i" 2>/dev/null;    # Check if command (app) is available
-```
+## Part 3: Snap Store
 
 The command to install snap apps:
 ```bash
-sudo snap install "${snapApps[$i]}"
+sudo snap install app_name
+```
+
+# Snap Apps
+snapApps=(
+    # Fun
+    toilet-deej    
+)
+
+# Install Snap applications
+for i in "${snapApps[@]}"
+do
+        sudo snap install "$i" # Install app
+done
 ```
 
 ## Full script
 
-Let's combine everything in a single script to install all your favourite Linux/Manjaro/Arch apps. 
+Let's combine everything in a single script to install all your favorite Linux/Manjaro/Arch apps. 
 
 ```bash
 # Pacman Apps
@@ -142,12 +148,9 @@ pamacApps=(
 )
 
 # Snap Apps
-declare -A snapApps
 snapApps=(
-    # Format: [command]=package_name
-
     # Fun
-    [toilet-deej.toilet]=toilet-deej    
+    toilet-deej    
 )
 
 # Install Pacman applications
@@ -168,14 +171,9 @@ do
 done
 
 # Install Snap applications
-for i in "${!snapApps[@]}"
+for i in "${snapApps[@]}"
 do
-    if hash "$i" 2>/dev/null;    # Check if command (app) is available
-    then
-        echo "$i already installed"
-    else
-        sudo snap install "${snapApps[$i]}" # Install app
-    fi
+        sudo snap install "$i" # Install app
 done
 ```
 
