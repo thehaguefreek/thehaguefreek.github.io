@@ -28,21 +28,22 @@ BOINC is a very small, lightweight program that only runs at full power when you
 
 For Manjaro/Arch, check the [Arch Wiki](https://wiki.archlinux.org/index.php/BOINC)
 
+**Install BOINC using aptitude:**
 ```bash
 sudo apt -y install boinc-client
 ```
 
-## Setup BOINC from the command line
+### Setup BOINC from the command line
 
 In this example I'm going to add the Rosetta@Home project, but of course you can use any project.
 
-### Start the service
+**Start the service**
 (this will create the empty config files)
 ```bash
 systemctl start boinc-client.service
 ```
 
-### Create a NEW account
+**Create a NEW account**
 (skip if you already have an account)
 ```bash
 # boinccmd --create_account URL EMAIL PASSWORD NICKNAME
@@ -54,25 +55,22 @@ status: Success
 poll status: operation in progress
 account key: 2152889_3e1767baafcdb03ee986240a4431e11e
 ```
-Copy your account key for the next step. (You can repeat this step if you haven't done so)
+* Copy your account key for the next step. (You can repeat this step if you haven't done so)
 
-### Add your project:
-
+**Add your project:**
 ```bash
 # boinccmd --project_attach URL KEY
 boinccmd --project_attach https://boinc.bakerlab.org/rosetta 2152889_3e1767baafcdb03ee986240a4431e11e
 ```
 * The key in this example is my weak key. Feel free to use it.
 
-### Check if everything is working fine
-
+**Check if everything is working fine**
 ```bash
 # It might take a few minutes for the application to download the user details
 watch boinccmd --get_simple_gui_info
 ```
 
-### Start BOINC automatically on boot
-
+**Start BOINC automatically on boot**
 ```bash
 sudo systemctl enable boinc-client.service
 ```
