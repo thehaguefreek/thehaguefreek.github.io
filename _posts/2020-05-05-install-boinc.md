@@ -22,11 +22,11 @@ Today, almost a million computers are actively connected to the "grid". Together
 
 ## Unobtrusive 
 
-BOINC is a very small, lightweight program that only runs at full power when your computer is not in use. And you can always change the settings if the standard settings don't suit you.
+BOINC is a very small, lightweight program that only runs at full power when your computer is idle. You can always change the settings if you want the app to be more or less active.
 
 ## Install BOINC on headless Ubuntu Server
 
-For Manjaro/Arch, check the [Arch Wiki](https://wiki.archlinux.org/index.php/BOINC)
+For Manjaro/Arch, check the [Arch Wiki](https://wiki.archlinux.org/index.php/BOINC)  
 
 **Install BOINC using aptitude:**
 ```bash
@@ -35,21 +35,21 @@ sudo apt -y install boinc-client
 
 ### Setup BOINC from the command line
 
-In this example I'm going to add the Rosetta@Home project, but of course you can use any project.
+In this example I'm going to add the Rosetta@Home project. But of course you can add any project.  
 
-**Start the service**
+**Start the service**  
 (this will create the empty config files)
 ```bash
 systemctl start boinc-client.service
 ```
 
-**Create a NEW account**
+**Create a NEW account**  
 (skip if you already have an account)
 ```bash
 # boinccmd --create_account URL EMAIL PASSWORD NICKNAME
 boinccmd --create_account https://boinc.bakerlab.org/rosetta user@example.com p@55w0rd Nickname
 ```
-It should output something like this:
+You should see something like this:
 ```bash
 status: Success
 poll status: operation in progress
@@ -62,7 +62,7 @@ account key: 2152889_3e1767baafcdb03ee986240a4431e11e
 # boinccmd --project_attach URL KEY
 boinccmd --project_attach https://boinc.bakerlab.org/rosetta 2152889_3e1767baafcdb03ee986240a4431e11e
 ```
-* The key in this example is my weak key. Feel free to use it.
+* The key in this example is my weak key. Feel free to use it.  
 
 **Check if everything is working fine**
 ```bash
