@@ -20,7 +20,7 @@ Today, almost a million computers are actively connected to the "grid". Together
 
 **This is is what the internet is made for!**
 
-### Unobtrusive 
+## Unobtrusive 
 
 BOINC is a very small, lightweight program that only runs at full power when your computer is not in use. And you can always change the settings if the standard settings don't suit you.
 
