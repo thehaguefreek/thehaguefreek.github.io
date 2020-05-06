@@ -76,3 +76,27 @@ watch boinccmd --get_simple_gui_info
 ```bash
 sudo systemctl enable boinc-client.service
 ```
+
+### Restrict CPU usage
+
+If you use your computer for other applications or if your system can't handle a constant 100% load, you might want to limit the CPU usage
+
+You can override the global settings by editing: **/var/lib/boinc-client/global_prefs_override.xml**
+
+```bash
+sudo nano /var/lib/boinc-client/global_prefs_override.xml
+```
+
+Add the following line to limit the CPU load to max **40%**:
+
+```bash
+<global_preferences>
+    <cpu_usage_limit>40</cpu_usage_limit>
+</global_preferences>
+```
+
+After saving the new settings, issue the following command:
+
+```bash
+ boinccmd --read_global_prefs_override
+ ```
