@@ -10,7 +10,7 @@ date:   2020-05-05
 categories: linux ubuntu headless boinc  
 ---
 
-![My Boinc Stats](https://www.boincstats.com/signature/-1/user/90689675018/sig.png)
+[![My Boinc Stats](https://www.boincstats.com/signature/-1/user/90689675018/sig.png)](https://www.boincstats.com/stats/-1/user/detail/84011c1c1634420bb12e98e44ffe0b7b)
 
 ## Save the world from the safety of your command line
 
