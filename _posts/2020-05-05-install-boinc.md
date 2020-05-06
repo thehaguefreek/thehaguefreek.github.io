@@ -5,12 +5,14 @@ toc: true
 toc_title: Contents
 title:  "BOINC from the CLI"
 subtitle:  "Install and setup BOINC on a headless Ubuntu Server"
-image: https://www.boincstats.com/signature/-1/user/90689675018/sig.png
+image: /pics/BOINC_logo.png
 date:   2020-05-05
 categories: linux ubuntu headless boinc  
 ---
 
 ## Save the world from the safety of your command line
+
+![My Boinc Stats](https://www.boincstats.com/signature/-1/user/90689675018/sig.png)
 
 Whether you want to fight COVID-19, search for extraterrestrial lifeforms or research elementary particles, you can help by installing BOINC.
 
