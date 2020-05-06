@@ -67,8 +67,9 @@ if hash app_name 2>/dev/null;    # Check if command (app) is available
 
 The command to install a Pamac app:
 ```bash
-pamac build app_name
+pamac build app_name --no-confirm
 ```
+* **--no-confirm** to automatically install the application with no questions asked.
 
 We have to add one last bit. Since the command and package name often differ, we'll have to put both in our array.
 
@@ -158,7 +159,7 @@ snapApps=(
 # Install Pacman applications
 for i in "${pacmanApps[@]}"
 do
-        sudo pacman -S "$i" --needed --noconfirm    # Install app if needed, without asking questions
+    sudo pacman -S "$i" --needed --noconfirm    # Install app if needed, without asking questions
 done
 
 # Install Pamac applications
@@ -175,7 +176,7 @@ done
 # Install Snap applications
 for i in "${snapApps[@]}"
 do
-        sudo snap install "$i" # Install app
+    sudo snap install "$i" # Install app
 done
 ```
 
