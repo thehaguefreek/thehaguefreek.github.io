@@ -24,7 +24,7 @@ Today, almost a million computers are actively connected to the "grid". Together
 
 ## Unobtrusive 
 
-BOINC is a very small, lightweight program that only runs at full power when your computer is idle. You can always change the settings if you want the app to be more or less active.
+BOINC is a very small, lightweight program that runs at full power only when your computer is idle. You can always change the settings if you want the app to be more or less active.
 
 ## Install BOINC on headless Ubuntu Server
 
