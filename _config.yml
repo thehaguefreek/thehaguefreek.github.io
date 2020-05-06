@@ -65,7 +65,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "F.C. Olgers"
+      author: "Freek"
       layout: post
       image: https://via.placeholder.com/1200x800
       show_sidebar: true
