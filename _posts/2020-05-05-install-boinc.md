@@ -5,7 +5,7 @@ toc: true
 toc_title: Contents
 title:  "BOINC from the CLI"
 subtitle:  "Install and setup BOINC on a headless Ubuntu Server"
-image: /pics/BOINC_logo.png
+image: https://www.boincstats.com/signature/-1/team/2379667551/project/sig.png
 date:   2020-05-05
 categories: linux ubuntu headless boinc  
 ---
