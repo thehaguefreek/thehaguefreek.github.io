@@ -9,6 +9,7 @@ image: /pics/BOINC_logo.png
 date:   2020-05-05
 categories: linux ubuntu headless boinc  
 ---
+![Boinc Stats](https://www.boincstats.com/signature/-1/user/90689675018/sig.png)
 
 ## Save the world from the safety of your command line
 
