@@ -79,7 +79,7 @@ sudo systemctl enable boinc-client.service
 
 ### Restrict CPU usage
 
-If you use your computer for other applications or if your system can't handle a constant 100% load, you might want to limit the CPU usage
+If you use your system for other applications as well or if your system can't handle a constant 100% load, you might want to limit the CPU usage
 
 You can override the global settings by editing: **/var/lib/boinc-client/global_prefs_override.xml**
 
