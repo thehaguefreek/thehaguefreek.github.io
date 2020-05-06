@@ -57,7 +57,7 @@ status: Success
 poll status: operation in progress
 account key: 2152889_3e1767baafcdb03ee986240a4431e11e
 ```
-* Copy your account key for the next step. (You can repeat this step if you haven't done so)
+* Copy your account key for the next step. (You can repeat this step if you've lost your key)
 
 **Add your project:**
 ```bash
