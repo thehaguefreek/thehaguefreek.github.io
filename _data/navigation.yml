@@ -2,11 +2,11 @@
   link: /blog/
 
 - name: Portfolio
-  link: /portfolio/#
+  link: /portfolio/
   dropdown:
     - name: Education
-      link: /education/
+      link: /portfolio/education/
     - name: Developement
-      link: /developement/
+      link: /portfolio/developement/
     - name: Photography
-      link: /photography/
+      link: /portfolio/photography/
