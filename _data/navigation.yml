@@ -3,9 +3,9 @@
   dropdown:
     - name: Education
       link: /education/
-    - name: Software/Hardware
-      link: /page-1/
+    - name: Developement
+      link: /developement/
     - name: Photography
-      link: /page-2/
+      link: /photography/
 - name: Blog
   link: /blog/
