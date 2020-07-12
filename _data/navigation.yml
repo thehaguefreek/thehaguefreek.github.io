@@ -2,7 +2,7 @@
   link: /blog/
 
 - name: Portfolio
-  link: /portfolio/
+  link: /portfolio/#
   dropdown:
     - name: Education
       link: /portfolio/education/
